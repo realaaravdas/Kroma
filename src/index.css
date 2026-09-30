@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-code: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Distinctive Application Palette */
+    --color-jet-black: #000000;
+    --color-obsidian-black: #0d0f14;
+    --color-obsidian-card: #14161f;
+    --color-obsidian-border: #222530;
+    --color-pure-white: #ffffff;
+    --color-cream: #f4ecd8;
+    --color-cream-muted: #d9cfba;
+    --color-vibrant-red: #ff2a3b;
+    --color-vibrant-orange: #ff7300;
+    --color-vibrant-blue: #0066ff;
+  }
+
+  body {
+    background-color: var(--color-jet-black);
+    color: var(--color-pure-white);
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
+    user-select: none;
+  }
+
+  code, pre, .font-code {
+    font-family: var(--font-code);
+  }
+}
+
+/* Custom sleek scrollbar for editor and terminal */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2d3a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-vibrant-blue);
+}
+
+/* Editor line numbers styling */
+.editor-line-number {
+  color: #4b5266;
+  user-select: none;
+}
+
+.editor-line-number.active {
+  color: var(--color-cream);
+}
+
+/* Terminal blink cursor */
+@keyframes term-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: var(--color-pure-white);
+  vertical-align: middle;
+  animation: term-blink 1s step-end infinite;
+}

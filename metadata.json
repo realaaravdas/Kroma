@@ -1,0 +1,6 @@
+{
+  "name": "Kroma Cloud IDE",
+  "description": "Minimalist, high-performance cloud IDE with multi-file workspaces, syntax recognition, Python/Pyodide, Rust, Go & Java compilation, Anaconda environment management, full Git source control, and built-in interactive terminal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
